@@ -1,0 +1,25 @@
+{
+  "name": "coding-time",
+  "description": "coding-time教程",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:linwu-hi/coding-time.git"
+  },
+  "license": "MIT",
+  "private": true,
+  "packageManager": "pnpm@8.3.1",
+  "scripts": {
+    "blog:dev": "vuepress dev docs",
+    "blog:build": "vuepress build docs",
+    "dev": "pnpm run javascript:dev",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "@vuepress/client": "2.0.0-beta.62",
+    "@vuepress/utils": "2.0.0-alpha.1",
+    "vue": "^3.3.4",
+    "vuepress": "2.0.0-beta.62",
+    "vuepress-theme-hope": "2.0.0-beta.219"
+  }
+}
