@@ -1,5 +1,6 @@
 export const dirName = {
     '/': [
+     '/preamble',
       {
         text: "基础",
         prefix:'base/',
