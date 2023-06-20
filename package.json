@@ -13,7 +13,8 @@
     "blog:build": "vuepress build docs",
     "dev": "pnpm run javascript:dev",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "dirname": "npx ts-node ./generateMarkdownToc.ts"
   },
   "devDependencies": {
     "@vuepress/client": "2.0.0-beta.62",
