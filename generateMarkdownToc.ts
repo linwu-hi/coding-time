@@ -7,7 +7,7 @@ function generateMarkdownToc(data) {
 
   function generateTocItem(item, prefix = '') {
     const link = item.link ? item.link : prefix + item + '.md';
-    toc += `- [${item.text}](docs/${link})\n`;
+    toc += `- [${item.text}](docs/${link}.md)\n`;
 
     if (item.children && item.children.length > 0) {
       toc += item.children.map(child => {
