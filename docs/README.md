@@ -22,7 +22,7 @@ actions:
 highlights:
 
   - header: 关于编程时光
-    description: 持续推出 《现代Javascrip高级教程》，《现代TypeScript高级教程》，《Dart入门实战》等等精品课程
+    description: 持续推出 《现代Javascrip高级教程》，《现代TypeScript高级教程》，《深入浅出Dart》等等精品课程
     image: /assets/image/wx.png
     bgImage: https://theme-hope-assets.vuejs.press/bg/4-light.svg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/4-dark.svg
@@ -35,9 +35,24 @@ highlights:
         details: 这门课程专注于TypeScript编程语言，它是JavaScript的超集，为JavaScript开发者提供了静态类型检查和更强大的工具支持。课程将深入讲解TypeScript的语法、类型系统、面向对象编程、模块化开发等内容，并通过实际案例和练习帮助学习者掌握使用TypeScript构建可扩展应用程序的技巧。
         link: https://www.coding-time.cn/typescript
 
-      - title: 《Dart入门实战》
+      - title: 《深入浅出Dart》
         details: Dart是一种可用于构建Web、移动和桌面应用程序的开发语言。该课程将引导学习者快速入门Dart编程，并教授使用Dart和Flutter框架开发跨平台移动应用的基础知识。学习者将学习Dart的语法、面向对象编程、Flutter UI开发等，通过实战项目的实践，逐步掌握Dart应用程序开发的技能。
         link:  https://www.coding-time.cn
+
+  - header: 深入浅出Dart
+    image: /assets/image/features.svg
+    bgImage: https://theme-hope-assets.vuejs.press/bg/5-light.svg
+    bgImageDark: https://theme-hope-assets.vuejs.press/bg/5-dark.svg
+    link: https://www.coding-time.cn/dart
+    highlights:
+      - title: 全面介绍Dart编程语言的实用指南，适合初学者和有一定经验的开发者。通过深入的解释和丰富的代码示例，读者将快速掌握Dart的核心概念和语法。
+
+      - title: 包括面向对象编程和异步操作等重要内容。通过丰富的代码示例和清晰的解释，你将能够迅速掌握Dart的特性，并将其应用于实际项目中。
+
+      - title: 通过与JavaScript的对比，突出了Dart在类型安全、可读性和工具生态方面的优势。读者将学习如何利用Dart的特性构建高效、可靠的应用程序，同时充分发挥Dart的跨平台开发能力。
+
+      - title: 掌握移动应用开发、Web开发还是服务器端开发，本书都会为你提供实用的技能和知识。你将学会使用Dart的面向对象编程、异步操作和模块化系统，以及如何与现有的JavaScript代码进行迁移和互操作。
+
 
   - header: 现代TypeScript高级教程
     image: /assets/image/layout.svg
