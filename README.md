@@ -71,4 +71,5 @@
 
 > 关注公众号获取代码以及最新教程和文章，也可以联系作者，获取帮助
 
-![](https://cdn.jsdelivr.net/gh/linwu-hi/coding-time-typescript@main/docs/.vuepress/public/assets/image/wx.png)
+![](https://i.imgtg.com/2023/06/21/OW9Rup.png)
+
