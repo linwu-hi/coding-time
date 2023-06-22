@@ -12,6 +12,7 @@ export default hopeTheme(
     author: {
       name: "linwu",
       url: "https://www.coding-time.cn",
+      email:'linwu.hi@gmail.com'
     },
 
     iconAssets: "fontawesome-with-brands",

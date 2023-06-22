@@ -8,9 +8,15 @@ export default defineUserConfig({
 
   dest: "./dist",
 
+  title: "现代Javascript高级教程",
   head:[
+    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
     ['link', { rel: 'icon', href: '/assets/image/favicon.ico' }]
   ],  
+  markdown: {
+    // @ts-ignore
+    externalLinks: { target: '_blank', rel: 'nofollow noopener noreferrer' }
+  },
   locales: {
     "/": {
       lang: "zh-CN",
