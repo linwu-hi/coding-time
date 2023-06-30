@@ -11,7 +11,7 @@
   "scripts": {
     "blog:dev": "vuepress dev docs",
     "blog:build": "vuepress build docs",
-    "dev": "pnpm run javascript:dev",
+    "dev": "pnpm run docs:dev",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "dirname": "npx ts-node ./generateMarkdownToc.ts"

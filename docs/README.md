@@ -84,5 +84,5 @@ highlights:
       - title: 面向对象编程：探讨JavaScript中的面向对象编程范式，包括原型继承、类、封装、继承和多态等概念。同时还介绍了ES6中新增的类语法和模块化的支持。
 
 copyright: false
-footer:  版权所有 © 2023-present linwu
+footer: <span> Copyright © 2023 - linwu</span>&nbsp;&nbsp;<span>&nbsp;<a style="color:#212529" href="https://beian.miit.gov.cn/" target="_blank">粤ICP备 2023073291号-1</a></span>
 ---
