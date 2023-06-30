@@ -1,7 +1,7 @@
 **/node_modules/**
 **/.vuepress/.cache/**
 **/.vuepress/.temp/**
-dist
+# dist
 coding-time.cn_bundle.crt
 coding-time.cn.key
 coding-time.cn_bundle.pem
