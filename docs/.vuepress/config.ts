@@ -10,6 +10,7 @@ export default defineUserConfig({
 
   title: "现代Javascript高级教程",
   head:[
+    ['meta', { name: 'baidu-site-verification', content: 'codeva-IkQhVRqkxI' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
     ['link', { rel: 'icon', href: '/assets/image/favicon.ico' }]
   ],  
