@@ -11,11 +11,11 @@ heroText: 编程时光
 tagline: 致力于帮助读者学习和进阶
 actions:
   - text: 使用指南 💡
-    link: ./preamble/
+    link: ./preamble.html
     type: primary
 
   - text: 开始阅读
-    link: ./preamble/
+    link: ./preamble.html
 
 
 
