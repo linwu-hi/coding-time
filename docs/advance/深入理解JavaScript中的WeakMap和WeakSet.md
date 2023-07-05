@@ -36,7 +36,6 @@
 
 使用`get`方法来获取某个键对应的值，使用`delete`方法来移除某个键及其对应的值，使用`has`方法来检查`WeakMap`中是否存在某个键。
 
-下面是一些示例：
 
 ```javascript
 let weakMap = new WeakMap();
@@ -96,13 +95,10 @@ console.log(obj.getSecret()); // 输出: 'my secret data'
 
 接下来，我们将更深入地探讨`WeakSet`的特性和用法。
 
-### 3.1 WeakSet的创建
-
-和使用
+### 3.1 WeakSet的创建和使用
 
 我们可以使用`new WeakSet()`来创建一个新的`WeakSet`。在创建了`WeakSet`之后，我们可以使用`add`方法来添加新的对象，使用`delete`方法来移除某个对象，使用`has`方法来检查`WeakSet`中是否存在某个对象。
 
-下面是一些示例：
 
 ```javascript
 let weakSet = new WeakSet();
