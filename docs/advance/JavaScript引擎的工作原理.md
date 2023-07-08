@@ -38,9 +38,7 @@ function greet(name) {
 greet("John");
 ```
 
-在解析过程中，解析器会识别出关键字`function`、`console`等，变量名`greet`、`name`等，操作符`+`等，然后将其转换为
-
-抽象语法树的节点。
+在解析过程中，解析器会识别出关键字`function`、`console`等，变量名`greet`、`name`等，操作符`+`等，然后将其转换为抽象语法树的节点。
 
 ### 2.2 编译（Compilation）
 

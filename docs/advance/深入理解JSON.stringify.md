@@ -8,7 +8,7 @@
 
 JSON.stringify() 函数具有以下属性：
 
-### a. replacer
+### replacer
 
 replacer 是一个可选的参数，它可以是一个函数或一个数组。它用于指定需要序列化的对象的属性。当 replacer 是一个函数时，它将被应用于对象的每个属性，可以用来过滤、替换或转换属性的值。当 replacer 是一个数组时，只有数组中包含的属性才会被序列化。
 
@@ -29,7 +29,7 @@ console.log(jsonString);
 // 输出: {"name":"John","age":25}
 ```
 
-### b. space
+### space
 
 space 是一个可选的参数，用于控制生成的 JSON 字符串的缩进和格式化。它可以是一个数字表示缩进的空格数，或者是一个字符串表示缩进的字符串。如果 space 是一个非负整数，则每一级缩进使用指定数量的空格；如果 space 是一个字符串，则使用该字符串作为缩进符号。
 
@@ -47,7 +47,7 @@ console.log(jsonString);
 // }
 ```
 
-### c. toJSON
+### toJSON
 
 如果要序列化的对象具有 toJSON() 方法，那么该方法将被调用，以便返回可序列化的值。toJSON() 方法可以在对象中定义，用于自定义对象在序列化过程中的行为。
 
@@ -74,7 +74,7 @@ console.log(jsonString);
 
 JSON.stringify() 在以下场景中非常有用：
 
-### a. 数据传输
+### 数据传输
 
 当需要将 JavaScript 对象转换为字符串，以便在网络中传输给后端或其他系统时，可以使用 JSON.stringify() 进行序列化。
 
@@ -83,12 +83,10 @@ const obj = { name: 'John', age: 25 };
 
 const jsonString = JSON.stringify(obj);
 console.log(jsonString);
-// 输出: {"name":"John
-
-","age":25}
+// 输出: {"name":"John","age":25}
 ```
 
-### b. 数据存储
+### 数据存储
 
 如果需要将 JavaScript 对象保存到本地存储（如浏览器的 LocalStorage 或数据库），可以使用 JSON.stringify() 将对象转换为 JSON 字符串后进行存储。
 
@@ -99,7 +97,7 @@ const jsonString = JSON.stringify(obj);
 localStorage.setItem('user', jsonString);
 ```
 
-### c. 日志记录
+### 日志记录
 
 在记录日志时，可以将 JavaScript 对象转换为 JSON 字符串，并将其作为日志消息的一部分。
 
@@ -110,7 +108,7 @@ const logMessage = `User info: ${JSON.stringify(obj)}`;
 console.log(logMessage);
 ```
 
-### d. 数据展示
+### 数据展示
 
 将 JavaScript 对象转换为 JSON 字符串后，可以方便地在前端页面中展示、渲染或打印。
 
@@ -189,15 +187,15 @@ function stringify(obj) {
 
  JSON.stringify() 时，需要注意以下事项：
 
-### a. 循环引用
+### 循环引用
 
 如果要序列化的对象存在循环引用，即对象之间相互引用，会导致无限递归的情况。为了避免死循环，可以使用 WeakSet 或其他方式来检测循环引用，并在检测到循环引用时抛出错误或采取其他处理方式。
 
-### b. 特殊类型
+### 特殊类型
 
 特殊类型（如日期和正则表达式）需要进行适当的处理，以确保正确的序列化和反序列化。
 
-### c. 性能优化
+### 性能优化
 
 JSON.stringify() 可能会在处理大型对象或嵌套层次较深的对象时产生性能问题。为了提高性能，可以考虑使用更高效的算法或采用其他优化策略。
 
@@ -214,4 +212,3 @@ JSON.stringify() 可能会在处理大型对象或嵌套层次较深的对象时
 本文详细介绍了 JSON.stringify() 的属性、应用场景，并提供了一个完整而优雅的实现，处理了循环引用、特殊类型（如日期和正则表达式）以及性能优化。我们还讨论了注意事项和相关的参考资料。通过深入了解和熟练掌握 JSON.stringify()，我们可以更好地处理和操作 JSON 数据，提高前端开发的质量和效率。
 
 记住，JSON.stringify() 是处理 JSON 数据的强大工具，但在特殊情况下需要特别小心，确保正确处理特殊类型和避免循环引用的问题。
-

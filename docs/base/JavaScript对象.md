@@ -8,7 +8,7 @@
 
 JavaScript 对象的属性是以键值对的形式存储的。对象属性可以是任意类型的值，包括基本数据类型（如字符串、数字、布尔值）和其他对象。
 
-### a. 访问属性
+###  访问属性
 
 我们可以使用点符号或方括号来访问对象的属性。例如：
 
@@ -22,7 +22,7 @@ console.log(person.name); // 输出: John
 console.log(person['age']); // 输出: 25
 ```
 
-### b. 修改属性
+### 修改属性
 
 可以通过赋值运算符来修改对象的属性值。例如：
 
@@ -31,7 +31,7 @@ person.age = 30;
 console.log(person.age); // 输出: 30
 ```
 
-### c. 删除属性
+### 删除属性
 
 可以使用 `delete` 关键字来删除对象的属性。例如：
 
@@ -40,7 +40,7 @@ delete person.age;
 console.log(person.age); // 输出: undefined
 ```
 
-### d. 动态添加属性
+### 动态添加属性
 
 JavaScript 对象是动态的，意味着我们可以在运行时动态添加新的属性。例如：
 
@@ -49,7 +49,7 @@ person.address = '123 Main Street';
 console.log(person.address); // 输出: 123 Main Street
 ```
 
-### e. 属性枚举
+### 属性枚举
 
 JavaScript 对象的属性默认可枚举，即可以通过 `for...in` 循环遍历对象的属性。可以使用 `Object.defineProperty()` 方法来定义不可枚举的属性。例如：
 
@@ -71,7 +71,7 @@ for (let key in car) {
 
 在上面的示例中，我们使用 `Object.defineProperty()` 定义了一个不可枚举的 `color` 属性，因此在 `for...in` 循环中不会被遍历到。
 
-### f. 属性描述符
+###  属性描述符
 
 每个属性都有一个与之关联的属性描述符，描述了属性的各种特性。可以使用 `Object.getOwnPropertyDescriptor()` 方法获取属性的描述符。例如：
 
@@ -87,7 +87,7 @@ console.log(descriptor);
 
 JavaScript 对象提供了许多常用的 API，用于操作和管理对象的属性和行为。
 
-### a. Object.keys()
+###  Object.keys()
 
 `Object.keys()` 方法返回一个包含对象
 
@@ -103,7 +103,7 @@ const keys = Object.keys(person);
 console.log(keys); // 输出: ['name', 'age']
 ```
 
-### b. Object.values()
+###  Object.values()
 
 `Object.values()` 方法返回一个包含对象所有可枚举属性值的数组。
 
@@ -117,7 +117,7 @@ const values = Object.values(person);
 console.log(values); // 输出: ['John', 25]
 ```
 
-### c. Object.entries()
+### Object.entries()
 
 `Object.entries()` 方法返回一个包含对象所有可枚举属性键值对的数组。
 
@@ -132,7 +132,7 @@ console.log(entries);
 // 输出: [['name', 'John'], ['age', 25]]
 ```
 
-### d. Object.assign()
+### Object.assign()
 
 `Object.assign()` 方法用于将一个或多个源对象的属性复制到目标对象中。
 
@@ -149,7 +149,7 @@ Object.assign(target, source);
 console.log(target); // 输出: { name: 'John', age: 25 }
 ```
 
-### e. Object.freeze()
+###  Object.freeze()
 
 `Object.freeze()` 方法冻结一个对象，使其属性不可修改。
 

@@ -78,9 +78,7 @@ console.log(emperor.rules);
 输出结果：`false`
 
 解析：
-尽管构造函数的 `this` 关键字指向通过构造函数构建的实例，但如果构造函数中使用 `return` 语句返回一个对象，则返回的对象将取代通过构造函数创建的实例。在上述代码中，`Emperor` 构造函数返回了 `puppet` 对象，因此 `emperor` 实例实际上就是 `puppet` 对象，其中
-
-的 `rules` 属性值为 `false`。
+尽管构造函数的 `this` 关键字指向通过构造函数构建的实例，但如果构造函数中使用 `return` 语句返回一个对象，则返回的对象将取代通过构造函数创建的实例。在上述代码中，`Emperor` 构造函数返回了 `puppet` 对象，因此 `emperor` 实例实际上就是 `puppet` 对象，其中的 `rules` 属性值为 `false`。
 
 ## 5. 函数调用时使用 `call` 或 `apply`
 
