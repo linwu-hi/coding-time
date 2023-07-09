@@ -1,12 +1,13 @@
 # 编程时光(ByteTech)
 
+
  > 持续推出 《现代Javascrip高级教程》，《现代TypeScript高级教程》，《深入浅出Dart》等等精品小册
 
  - 《现代JavaScript高级教程》小册旨在帮助学习者进阶JavaScript编程，涵盖现代JavaScript的高级概念和技术，包括异步编程、函数式编程、模块化开发、ES6+语法等。通过实际项目示例和练习，学习者将深入了解如何在JavaScript中构建高质量的应用程序。
 
- -《现代TypeScript高级教程》这门小册专注于TypeScript编程语言，它是JavaScript的超集，为JavaScript开发者提供了静态类型检查和更强大的工具支持。课程将深入讲解TypeScript的语法、类型系统、面向对象编程、模块化开发等内容，并通过实际案例和练习帮助学习者掌握使用TypeScript构建可扩展应用程序的技巧。
+ - 《现代TypeScript高级教程》这门小册专注于TypeScript编程语言，它是JavaScript的超集，为JavaScript开发者提供了静态类型检查和更强大的工具支持。课程将深入讲解TypeScript的语法、类型系统、面向对象编程、模块化开发等内容，并通过实际案例和练习帮助学习者掌握使用TypeScript构建可扩展应用程序的技巧。
 
- -《深入浅出Dart》Dart是一种可用于构建Web、移动和桌面应用程序的开发语言。该课程将引导学习者快速入门Dart编程，并教授使用Dart和Flutter框架开发跨平台移动应用的基础知识。学习者将学习Dart的语法、面向对象编程、Flutter UI开发等，通过实战项目的实践，逐步掌握Dart应用程序开发的技能。
+ - 《深入浅出Dart》Dart是一种可用于构建Web、移动和桌面应用程序的开发语言。该课程将引导学习者快速入门Dart编程，并教授使用Dart和Flutter框架开发跨平台移动应用的基础知识。学习者将学习Dart的语法、面向对象编程、Flutter UI开发等，通过实战项目的实践，逐步掌握Dart应用程序开发的技能。
 
 ## 《现代JavaScript高级教程》序言☀️
 
