@@ -1,0 +1,7 @@
+Sitemap: https:/www.coding-time.cn/sitemap.xml
+
+User-agent: *
+User-agent:*
+Disallow:
+
+Sitemap: https://www.coding-time.cn/coding-time/sitemap.xml
