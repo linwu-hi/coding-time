@@ -18,7 +18,7 @@ export default hopeTheme(
     iconAssets: "fontawesome-with-brands",
 
     logo: "/logo.svg",
-    navTitle:'现代Javascript高级教程',
+    navTitle:'编程时光',
 
     repo: "https://github.com/linwu-hi/coding-time",
 
@@ -37,9 +37,9 @@ export default hopeTheme(
         // sidebar
         sidebar: zhSidebar,
 
-        footer: '<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="color:#212529" href="https://beian.miit.gov.cn/" target="_blank">粤ICP备 2023073291号-1</a></span>',
+        // footer: '<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="color:#212529" href="https://beian.miit.gov.cn/" target="_blank">粤ICP备 2023073291号-1</a></span>',
 
-        displayFooter: true,
+        // displayFooter: true,
 
         // page meta
         metaLocales: {

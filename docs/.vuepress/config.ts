@@ -21,12 +21,11 @@ export default defineUserConfig({
   locales: {
     "/": {
       lang: "zh-CN",
-      title: "",
+      title: "编程时光",
       description: "编程时光",
     },
   },
 
   theme,
-
   shouldPrefetch: false,
 });

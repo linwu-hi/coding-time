@@ -11,11 +11,11 @@ heroText: 编程时光
 tagline: 致力于帮助读者学习和进阶
 actions:
   - text: 使用指南 💡
-    link: /preamble.html
+    link: /js/preamble.html
     type: primary
 
   - text: 开始阅读
-    link: /preamble.html
+    link: /js/preamble.html
 
 
 
@@ -23,7 +23,7 @@ highlights:
 
   - header: 关于编程时光
     description: 持续推出 《现代Javascrip高级教程》，《现代TypeScript高级教程》，《深入浅出Dart》等等精品课程
-    image: /assets/image/wx.png
+    image:  /assets/image/layout.svg
     bgImage: https://theme-hope-assets.vuejs.press/bg/4-light.svg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/4-dark.svg
     highlights:
@@ -55,7 +55,7 @@ highlights:
 
 
   - header: 现代TypeScript高级教程
-    image: /assets/image/layout.svg
+    image: /assets/image/advanced.svg
     bgImage: https://theme-hope-assets.vuejs.press/bg/2-light.svg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/3-dark.svg
     link: https://www.coding-time.cn/typescript
