@@ -1,7 +1,7 @@
 <template>
-  <div class="global-ui">
-    <div class="qrcode_container" >
-      <div class="tencent_code" >
+  <div class="qrcode-ui">
+    <div class="qrcode-container" >
+      <div class="tencent-code" >
         <h4 >关注公众号</h4>
         <p >和小伙伴们一起学习</p> <img src="/assets/gzh.jpg" alt="" >
       </div>
@@ -21,7 +21,7 @@
 
 <style scoped>
 
-.qrcode_container {
+.qrcode-container {
     position: fixed;
     right: 0;
     top: 110px;
@@ -32,22 +32,22 @@
     box-shadow: -1px 0 2px .5px rgba(0,127,255,.2)
 }
 
-.qrcode_container>div img {
+.qrcode-container>div img {
     width: 140px
 }
 
-.qrcode_container>div h4 {
+.qrcode-container>div h4 {
     font-size: 15px;
     color: #007fff;
     margin: 0
 }
 
 
-.qrcode_container>div p {
+.qrcode-container>div p {
     font-size: 12px;
     margin: 10px 0
 }
-.qrcode_container>div p span {
+.qrcode-container>div p span {
     color: #007fff;
     font-weight: 700
 }
@@ -56,12 +56,12 @@
   width:140px;
   height:170px;
 }
-.tencent_code {
+.tencent-code {
     margin-bottom: 40px
 }
 
 @media screen and (max-width: 1360px) {
-    .qrcode_container {
+    .qrcode-container {
         display:none
     }
 }
