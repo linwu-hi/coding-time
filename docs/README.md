@@ -33,7 +33,7 @@ highlights:
 
       - title: 《现代TypeScript高级教程》
         details: 这门课程专注于TypeScript编程语言，它是JavaScript的超集，为JavaScript开发者提供了静态类型检查和更强大的工具支持。课程将深入讲解TypeScript的语法、类型系统、面向对象编程、模块化开发等内容，并通过实际案例和练习帮助学习者掌握使用TypeScript构建可扩展应用程序的技巧。
-        link:  https://www.coding-time.cn/typescript
+        link:  https://www.coding-time.cn/ts
 
       - title: 《深入浅出Dart》
         details: Dart是一种可用于构建Web、移动和桌面应用程序的开发语言。该课程将引导学习者快速入门Dart编程，并教授使用Dart和Flutter框架开发跨平台移动应用的基础知识。学习者将学习Dart的语法、面向对象编程、Flutter UI开发等，通过实战项目的实践，逐步掌握Dart应用程序开发的技能。
