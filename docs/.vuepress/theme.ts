@@ -59,7 +59,7 @@ export default hopeTheme(
         provider: "Giscus",
         repo: "linwu-hi/coding-time",
         repoId: "R_kgDOJxIk0A",
-        category: "Announcements",
+        category: "General",
         categoryId: "DIC_kwDOJxIk0M4CXWCp",
       },
 
