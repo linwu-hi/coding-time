@@ -14,6 +14,10 @@ export const zhNavbar = navbar([
     link: "/ts/"
   },
   {
+    text: 'linwu的算法笔记',
+    link:"/lc/"
+  },
+  {
     text: '谷歌插件小册',
     link: 'https://gitee.com/linwu-hi/coding-time-chrome',
   },
