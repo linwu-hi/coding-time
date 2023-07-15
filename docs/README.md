@@ -22,11 +22,15 @@ actions:
 highlights:
 
   - header: 关于编程时光
-    description: 持续推出 《现代Javascrip高级教程》，《现代TypeScript高级教程》，《深入浅出Dart》等等精品课程
+    description: 持续推出 《linwu的算法笔记》，《现代Javascrip高级教程》，《现代TypeScript高级教程》，《深入浅出Dart》等等精品课程
     image:  /assets/image/layout.svg
     bgImage: https://theme-hope-assets.vuejs.press/bg/4-light.svg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/4-dark.svg
     highlights:
+      - title: 《linwu的算法笔记》
+        details: 写给前端同学的算法笔记📒，这是去腾讯之前整理的算法笔记，跟着刷一遍，去面试字节、腾讯等其它大厂就轻松多了。
+        link: https://www.coding-time.cn/lc
+
       - title: 《现代JavaScript高级教程》
         details: 课程旨在帮助学习者进阶JavaScript编程，涵盖现代JavaScript的高级概念和技术，包括异步编程、函数式编程、模块化开发、ES6+语法等。通过实际项目示例和练习，学习者将深入了解如何在JavaScript中构建高质量的应用程序。
         link: https://www.coding-time.cn
@@ -38,6 +42,22 @@ highlights:
       - title: 《深入浅出Dart》
         details: Dart是一种可用于构建Web、移动和桌面应用程序的开发语言。该课程将引导学习者快速入门Dart编程，并教授使用Dart和Flutter框架开发跨平台移动应用的基础知识。学习者将学习Dart的语法、面向对象编程、Flutter UI开发等，通过实战项目的实践，逐步掌握Dart应用程序开发的技能。
         link:  https://www.coding-time.cn/dart
+
+  - header: linwu的算法笔记
+    image: /assets/image/blog.svg
+    bgImage: https://theme-hope-assets.vuejs.press/bg/1-light.svg
+    bgImageDark: https://theme-hope-assets.vuejs.press/bg/1-dark.svg
+    link: https://www.coding-time.cn/dart
+    highlights:
+      - title: 数据结构和算法的重要性： 算法被称为程序的灵魂，因为优秀的算法能在处理海量数据时保持高速计算能力。计算框架和缓存技术的核心功能就源于算法。在实际工作中，一个高效的算法可以使支持数千万在线用户的服务器程序稳定运行。数据结构和算法也是许多一线IT公司面试的重要部分。如果程序员不想永远只是编写代码，那么就需要花时间研究数据结构和算法。
+
+
+      - title: 经典的算法面试题： 有一些经典的算法问题常常出现在面试中，如字符串匹配问题、动态规划问题。这些问题涉及到的算法包括暴力匹配、KMP 算法、分治算法、回溯算法、深度优先搜索 (DFS) 和贪心算法。解决这些问题不仅需要理解和掌握相关的算法，还需要能够灵活运用这些算法来优化程序。
+
+
+      - title: 本笔记📒深入讲解数据结构和算法，内容系统完整，非常适合想要深入理解数据结构和算法的学习者。我们采用了"应用场景 -> 数据结构或算法 -> 剖析原理 -> 分析实现步骤 -> 代码实现"的教学步骤，力求通俗易懂。
+
+      - title: 数据结构和算法的内容介绍： 本课程覆盖了各种数据结构和算法，包括但不限于字符串匹配算法、分治算法、回溯算法、深度优先搜索 (DFS) 和贪心算法。我们会通过具体的应用场，来讲解这些数据结构和算法的原理和实现步骤。
 
   - header: 深入浅出Dart
     image: /assets/image/features.svg

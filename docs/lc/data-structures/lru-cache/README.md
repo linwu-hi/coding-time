@@ -22,9 +22,81 @@
 
 ![链表](./images/lru-cache.jpg)
 
-*使用[okso.app](https://okso.app)制作*
+```js
+class Node {
+  constructor(key, value) {
+    this.key = key;
+    this.value = value;
+    this.prev = null;
+    this.next = null;
+  }
+}
 
-您还可以在[LRUCache.test.js](./__test__/LRUCache.test.js)文件中找到更多LRU缓存的工作方式的测试用例示例。
+class LRUCache {
+  constructor(capacity) {
+    this.capacity = capacity;
+    this.size = 0;
+    this.cache = new Map();
+    this.head = new Node(0, 0); // 伪头节点
+    this.tail = new Node(0, 0); // 伪尾节点
+    this.head.next = this.tail;
+    this.tail.prev = this.head;
+  }
+
+  get(key) {
+    if (this.cache.has(key)) {
+      const node = this.cache.get(key);
+      this.moveToHead(node);
+      return node.value;
+    }
+    return -1;
+  }
+
+  put(key, value) {
+    if (this.cache.has(key)) {
+      const node = this.cache.get(key);
+      node.value = value;
+      this.moveToHead(node);
+    } else {
+      const newNode = new Node(key, value);
+      this.cache.set(key, newNode);
+      this.addToHead(newNode);
+      this.size++;
+      if (this.size > this.capacity) {
+        const tailNode = this.removeFromTail();
+        this.cache.delete(tailNode.key);
+        this.size--;
+      }
+    }
+  }
+
+  moveToHead(node) {
+    this.removeFromList(node);
+    this.addToHead(node);
+  }
+
+  removeFromList(node) {
+    const prevNode = node.prev;
+    const nextNode = node.next;
+    prevNode.next = nextNode;
+    nextNode.prev = prevNode;
+  }
+
+  addToHead(node) {
+    const nextNode = this.head.next;
+    this.head.next = node;
+    node.prev = this.head;
+    node.next = nextNode;
+    nextNode.prev = node;
+  }
+
+  removeFromTail() {
+    const tailNode = this.tail.prev;
+    this.removeFromList(tailNode);
+    return tailNode;
+  }
+}
+```
 
 ### 版本2：有序映射
 
@@ -32,9 +104,47 @@
 
 然而，更简单的方法可能是使用JavaScript的[Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)对象。`Map`对象保存键值对，并通过记住键的原始插入顺序来**保持原始顺序**。我们可以利用这一点，通过删除和重新添加项来将最近使用的项保持在映射的“末尾”。如果缓存容量溢出，位于`Map`开头的项将首先被驱逐。可以使用`map.keys()`之类的`IterableIterator`来检查项的顺序。
 
-请参阅[LRUCacheOnMap.js](./LRUCacheOnMap.js)中的`LRUCacheOnMap`实现示例。
+```js
+class LRUCache {
+  constructor(capacity) {
+    this.capacity = capacity;
+    this.cache = new Map();
+    this.keySet = new Set();
+  }
 
-您还可以在[LRUCacheOnMap.test.js](./__test__/LRUCacheOnMap.test.js)文件中找到更多LRU缓存的工作方式的测试用例示例。
+  get(key) {
+    if (this.cache.has(key)) {
+      const value = this.cache.get(key);
+      // 更新访问顺序
+      this.keySet.delete(key);
+      this.keySet.add(key);
+      return value;
+    }
+    return -1;
+  }
+
+  put(key, value) {
+    if (this.cache.has(key)) {
+      // 更新已存在的键值对
+      this.cache.set(key, value);
+      // 更新访问顺序
+      this.keySet.delete(key);
+      this.keySet.add(key);
+    } else {
+      // 插入新的键值对
+      if (this.cache.size === this.capacity) {
+        // 达到容量上限，移除最久未使用的键值对
+        const oldestKey = this.keySet.values().next().value;
+        this.cache.delete(oldestKey);
+        this.keySet.delete(oldestKey);
+      }
+      // 添加新的键值对
+      this.cache.set(key, value);
+      this.keySet.add(key);
+    }
+  }
+}
+```
 
 ## 复杂度
 

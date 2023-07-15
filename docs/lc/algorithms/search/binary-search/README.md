@@ -8,6 +8,30 @@
 
 **时间复杂度**：`O(log(n))` - 因为每次迭代都将搜索区域分成两半。
 
+
+## 完整实现
+
+```js
+function binarySearch(array, target) {
+  let left = 0;
+  let right = array.length - 1;
+
+  while (left <= right) {
+    const mid = left + Math.floor((right - left) / 2);
+
+    if (array[mid] === target) {
+      return mid; // 找到目标元素，返回索引
+    } else if (array[mid] < target) {
+      left = mid + 1; // 目标元素在右侧，调整左边界
+    } else {
+      right = mid - 1; // 目标元素在左侧，调整右边界
+    }
+  }
+
+  return -1; // 未找到目标元素
+}
+```
+
 ## 参考资料
 
 - [维基百科](https://en.wikipedia.org/wiki/Binary_search_algorithm)

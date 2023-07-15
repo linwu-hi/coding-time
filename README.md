@@ -1,7 +1,9 @@
 # 编程时光(ByteTech)
 
 
- > 持续推出 《现代Javascrip高级教程》，《现代TypeScript高级教程》，《深入浅出Dart》等等精品小册
+ > 持续推出 《linwu的算法笔记》，《现代Javascrip高级教程》，《现代TypeScript高级教程》，《深入浅出Dart》等等精品小册
+
+ - 《linwu的算法笔记》 写给前端同学的算法笔记📒，这是去腾讯之前整理的算法笔记，跟着刷一遍，去面试字节、腾讯等其它大厂就轻松多了
 
  - 《现代JavaScript高级教程》小册旨在帮助学习者进阶JavaScript编程，涵盖现代JavaScript的高级概念和技术，包括异步编程、函数式编程、模块化开发、ES6+语法等。通过实际项目示例和练习，学习者将深入了解如何在JavaScript中构建高质量的应用程序。
 
@@ -9,7 +11,56 @@
 
  - 《深入浅出Dart》Dart是一种可用于构建Web、移动和桌面应用程序的开发语言。该课程将引导学习者快速入门Dart编程，并教授使用Dart和Flutter框架开发跨平台移动应用的基础知识。学习者将学习Dart的语法、面向对象编程、Flutter UI开发等，通过实战项目的实践，逐步掌握Dart应用程序开发的技能。
 
-## 《现代JavaScript高级教程》序言☀️
+
+
+## 《linwu的算法笔记》序言
+
+
+> 写给前端同学的算法笔记📒，这是去腾讯之前整理的算法笔记，跟着刷一遍，去面试字节、腾讯等其它大厂就轻松多了
+
+
+
+- 数据结构和算法的重要性： 算法被称为程序的灵魂，因为优秀的算法能在处理海量数据时保持高速计算能力。计算框架和缓存技术的核心功能就源于算法。在实际工作中，一个高效的算法可以使支持数千万在线用户的服务器程序稳定运行。数据结构和算法也是许多一线IT公司面试的重要部分。如果程序员不想永远只是编写代码，那么就需要花时间研究数据结构和算法。
+
+
+- 经典的算法面试题： 有一些经典的算法问题常常出现在面试中，如字符串匹配问题、动态规划问题。这些问题涉及到的算法包括暴力匹配、KMP 算法、分治算法、回溯算法、深度优先搜索 (DFS) 和贪心算法。解决这些问题不仅需要理解和掌握相关的算法，还需要能够灵活运用这些算法来优化程序。
+
+
+- 本笔记📒深入讲解数据结构和算法，内容系统完整，非常适合想要深入理解数据结构和算法的学习者。我们采用了"应用场景 -> 数据结构或算法 -> 剖析原理 -> 分析实现步骤 -> 代码实现"的教学步骤，力求通俗易懂。
+
+- 数据结构和算法的内容介绍： 本课程覆盖了各种数据结构和算法，包括但不限于字符串匹配算法、分治算法、回溯算法、深度优先搜索 (DFS) 和贪心算法。我们会通过具体的应用场，来讲解这些数据结构和算法的原理和实现步骤。
+
+
+### 📒笔记目录
+
+- [数据结构](docs/data-structures/linked-list.md)
+  - [linked-list](docs/data-structures/linked-list.md)
+  - [doubly-linked-list](docs/data-structures/doubly-linked-list.md)
+  - [queue](docs/data-structures/queue.md)
+  - [stack](docs/data-structures/stack.md)
+  - [hash-table](docs/data-structures/hash-table.md)
+  - [graph](docs/data-structures/graph.md)
+  - [heap](docs/data-structures/heap.md)
+  - [lru-cache](docs/data-structures/lru-cache.md)
+  - [priority-queue](docs/data-structures/priority-queue.md)
+  - [disjoint-set](docs/data-structures/disjoint-set.md)
+  - [bloom-filter](docs/data-structures/bloom-filter.md)
+  - [trie](docs/data-structures/trie.md)
+- [算法](docs/algorithms/binary-search.md)
+  - [排序](docs/algorithms/sorting/bubble-sort.md)
+  - [搜索](docs/algorithms/search/binary-search.md)
+  - [链表](docs/algorithms/linked-list/traversal.md)
+  - [栈](docs/algorithms/stack/preamble.md)
+  - [队列](docs/algorithms/queue/preamble.md)
+  - [双指针](docs/algorithms/two-pointers/preamble.md)
+  - [滑动窗口](docs/algorithms/sliding-window/preamble.md)
+  - [动态规划](docs/algorithms/dynamic-programming/preamble.md)
+  - [贪心算法](docs/algorithms/greedy-algorithm/preamble.md)
+  - [字符串](docs/algorithms/string/rabin-karp.md)
+  - [树](docs/algorithms/tree/breadth-first-search.md)
+  - [图](docs/algorithms/graph/breadth-first-search.md)
+  - [统计数据](docs/algorithms/statistics/weighted-random.md)
+## 《现代JavaScript高级教程》序言
 
 > 可能是市面上比较好的Javascript高级教程，适合有一定Javascript基础的同学学习
 

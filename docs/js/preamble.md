@@ -1,6 +1,11 @@
 # 序言
 
+![现代JavaScript高级教程](/js.jpg)
+
+
+
 > 可能是市面上比较好的Javascript高级教程，适合有一定Javascript基础的同学学习
+
 
 
 欢迎来到《现代JavaScript高级教程》！在这本书中，我将与您一起探索JavaScript这门令人着迷的编程语言的深度和广度。

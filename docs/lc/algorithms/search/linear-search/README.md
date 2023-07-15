@@ -9,6 +9,20 @@
 
 **时间复杂度**：`O(n)` - 因为在最坏情况下，我们需要检查每个元素一次。
 
+
+## 完整代码
+
+```js
+function linearSearch(array, target) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === target) {
+      return i; // 找到目标元素，返回索引
+    }
+  }
+  return -1; // 未找到目标元素
+}
+```
+
 ## 参考资料
 - [维基百科](https://en.wikipedia.org/wiki/Linear_search)
 - [TutorialsPoint](https://www.tutorialspoint.com/data_structures_algorithms/linear_search_algorithm.htm)

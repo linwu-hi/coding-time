@@ -16,14 +16,10 @@
 链表节点表示链表中的一个元素，它包含一个值和一个指向下一个节点的引用。它的实现可以参考下面的代码：
 
 ```js
-export default class LinkedListNode {
-  constructor(value, next = null) {
-    this.value = value; // 节点的值
-    this.next = next; // 指向下一个节点的引用
-  }
-
-  toString(callback) {
-    return callback ? callback(this.value) : `${this.value}`;
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
   }
 }
 ```
@@ -35,223 +31,141 @@ export default class LinkedListNode {
 链表类提供了一系列方法来操作链表，如在开头插入节点（prepend）、在末尾插入节点（append）、在指定位置插入节点（insert）、删除节点（delete）、查找节点（find）等。以下是链表类的实现代码：
 
 ```js
-import LinkedListNode from './LinkedListNode';
-import Comparator from '../../utils/comparator/Comparator';
-
-export default class LinkedList {
-  constructor(comparatorFunction) {
-    this.head = null; // 头节点
-    this.tail = null; // 尾节点
-    this.compare = new Comparator(comparatorFunction); // 比较器
+class LinkedList {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
   }
 
-  // 在链表开头插入节点
-  prepend(value) {
-    const newNode = new LinkedListNode(value, this.head);
-    this.head = newNode;
-
-    if (!this.tail) {
-      this.tail = newNode;
-    }
-
-    return this;
-  }
-
-  // 在链表末尾插入节点
+  // 在链表尾部添加新节点
   append(value) {
-    const newNode = new LinkedListNode(value);
+    const newNode = new Node(value);
 
     if (!this.head) {
       this.head = newNode;
       this.tail = newNode;
-      return this;
+    } else {
+      this.tail.next = newNode;
+      this.tail = newNode;
     }
 
-    this.tail.next = newNode;
-    this.tail = newNode;
-
-    return this;
+    this.length++;
   }
 
-  // 在指定位置插入节点
-  insert(value, index) {
-    const newNode = new LinkedListNode(value);
+  // 在链表指定位置插入新节点
+  insertAt(value, index) {
+    if (index < 0 || index > this.length) {
+      throw new Error("Index out of range");
+    }
+
+    const newNode = new Node(value);
 
     if (index === 0) {
-      this.prepend(value);
+      newNode.next = this.head;
+      this.head = newNode;
+      if (!this.tail) {
+        this.tail = newNode;
+      }
+    } else if (index === this.length) {
+      this.tail.next = newNode;
+      this.tail = newNode;
     } else {
-      let count = 1;
       let currentNode = this.head;
+      let prevNode = null;
+      let currentIndex = 0;
 
-      while (currentNode) {
-        if (count === index) {
-          break;
-        }
+      while (currentIndex < index) {
+        prevNode = currentNode;
         currentNode = currentNode.next;
-        count += 1;
+        currentIndex++;
       }
 
-      if (currentNode) {
-        newNode.next = currentNode.next;
-        currentNode.next = newNode;
-      } else {
-        if (this.tail) {
-          this.tail.next = newNode;
-          this.tail = newNode;
-        } else {
-          this.head = newNode;
-          this.tail = newNode;
-        }
-      }
+      prevNode.next = newNode;
+      newNode.next = currentNode;
     }
 
-    return this;
+    this.length++;
   }
 
-  // 删除节点
-  delete(value) {
-    if (!this.head) {
-      return null;
-    }
-
-    let deletedNode = null;
-
-    while (this.head && this.compare.equal(this.head.value, value)) {
-      deletedNode = this.head;
-      this.head = this.head.next;
+  // 获取指定位置节点的值
+  getAt(index) {
+    if (index < 0 || index >= this.length) {
+      throw new Error("Index out of range");
     }
 
     let currentNode = this.head;
+    let currentIndex = 0;
 
-    if (currentNode !== null) {
-      while (currentNode.next) {
-        if (this.compare.equal(currentNode.next.value, value)) {
-          deletedNode = currentNode.next;
-          currentNode.next = currentNode.next.next;
-        } else {
-          currentNode = currentNode.next;
-        }
-      }
-    }
-
-    if (this.compare.equal(this.tail.value, value)) {
-      this.tail = currentNode;
-    }
-
-    return deletedNode;
-  }
-
-  // 查找节点
-  find({ value = undefined, callback = undefined }) {
-    if (!this.head) {
-      return null;
-    }
-
-    let currentNode = this.head;
-
-    while (currentNode) {
-      if (callback && callback(currentNode.value)) {
-        return currentNode;
-      }
-
-      if (value !== undefined && this.compare.equal(currentNode.value, value)) {
-        return currentNode;
-      }
-
+    while (currentIndex < index) {
       currentNode = currentNode.next;
+      currentIndex++;
     }
 
-    return null;
+    return currentNode.value;
   }
 
-  // 删除尾节点
-  deleteTail() {
-    const deletedTail = this.tail;
-
-    if (this.head === this.tail) {
-      this.head = null;
-      this.tail = null;
-      return deletedTail;
+  // 删除指定位置的节点
+  removeAt(index) {
+    if (index < 0 || index >= this.length) {
+      throw new Error("Index out of range");
     }
 
     let currentNode = this.head;
-    while (currentNode.next) {
-      if (!currentNode.next.next) {
-        currentNode.next = null;
-      } else {
-        currentNode = currentNode.next;
-      }
-    }
-
-    this.tail = currentNode;
-
-    return deletedTail;
-  }
-
-  // 删除头节点
-  deleteHead() {
-    if (!this.head) {
-      return null;
-    }
-
-    const deletedHead = this.head;
-
-    if (this.head.next) {
-      this.head = this.head.next;
-    } else {
-      this.head = null;
-      this.tail = null;
-    }
-
-    return deletedHead;
-  }
-
-  // 将数组转换为链表
-  fromArray(values) {
-    values.forEach((value) => this.append(value));
-
-    return this;
-  }
-
-  // 将链表转换为数组
-  toArray() {
-    const nodes = [];
-    let currentNode = this.head;
-
-    while (currentNode) {
-      nodes.push(currentNode);
-      currentNode = currentNode.next;
-    }
-
-    return nodes;
-  }
-
-  // 将链表转换为字符串
-  toString(callback) {
-    return this.toArray().map((node) => node.toString(callback)).toString();
-  }
-
-  // 反转链表
-  reverse() {
-    let currNode = this.head;
     let prevNode = null;
-    let nextNode = null;
+    let currentIndex = 0;
 
-    while (currNode) {
-      nextNode = currNode.next;
-      currNode.next = prevNode;
-      prevNode = currNode;
-     
+    if (index === 0) {
+      this.head = currentNode.next;
+      if (this.length === 1) {
+        this.tail = null;
+      }
+    } else if (index === this.length - 1) {
+      while (currentIndex < index) {
+        prevNode = currentNode;
+        currentNode = currentNode.next;
+        currentIndex++;
+      }
 
-      currNode = nextNode;
+      prevNode.next = null;
+      this.tail = prevNode;
+    } else {
+      while (currentIndex < index) {
+        prevNode = currentNode;
+        currentNode = currentNode.next;
+        currentIndex++;
+      }
+
+      prevNode.next = currentNode.next;
     }
 
-    this.tail = this.head;
-    this.head = prevNode;
+    this.length--;
+  }
 
-    return this;
+  // 遍历链表并将节点值以数组形式返回
+  toArray() {
+    const result = [];
+    let currentNode = this.head;
+
+    while (currentNode) {
+      result.push(currentNode.value);
+      currentNode = currentNode.next;
+    }
+
+    return result;
   }
 }
+```
+
+```js
+const linkedList = new LinkedList();
+linkedList.append(10);
+linkedList.append(20);
+linkedList.insertAt(15, 1);
+linkedList.removeAt(0);
+
+console.log(linkedList.toArray()); // 输出: [15, 20]
+
 ```
 
 ## 复杂度

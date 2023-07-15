@@ -4,7 +4,6 @@
 
 ![Doubly Linked List](./images/doubly-linked-list.jpeg)
 
-*Made with [okso.app](https://okso.app)*
 
 两个节点链接允许在任一方向上遍历列表。
 

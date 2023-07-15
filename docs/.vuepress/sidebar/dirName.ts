@@ -188,13 +188,26 @@ export const dirName = {
         'doubly-linked-list',
         'queue',
         'stack',
+        'priority-queue',
         'hash-table',
         'graph',
         'heap',
         'lru-cache',
-        'priority-queue',
         'disjoint-set',
         'bloom-filter',
+        {
+          text:'树',
+          prefix:'tree',
+          link:'tree/binary-search-tree',
+          collapsible:true,
+          children:[
+            'binary-search-tree',
+            'avl-tree',
+            'red-black-tree',
+            'segment-tree',
+            'fenwick-tree',
+          ]
+        },
         'trie'
       ]
     },
@@ -358,7 +371,16 @@ export const dirName = {
           ]
         },
         {
-          text:"字符串",
+          text:"树",
+          collapsible:true,
+          prefix:'tree',
+          children:[
+            'breadth-first-search',
+            'depth-first-search',
+          ]
+        },
+        {
+          text:"字符串(可选)",
           collapsible:true,
           prefix:'string',
           children:[
@@ -373,16 +395,7 @@ export const dirName = {
           ]
         },
         {
-          text:"树",
-          collapsible:true,
-          prefix:'tree',
-          children:[
-            'breadth-first-search',
-            'depth-first-search',
-          ]
-        },
-        {
-          text:"图",
+          text:"图(可选)",
           collapsible:true,
           prefix:'graph',
           children:[
@@ -404,7 +417,7 @@ export const dirName = {
           ]
         },
         {
-          text:'统计数据',
+          text:'统计数据(可选)',
           collapsible:true,
           prefix:'statistics',
           children:[

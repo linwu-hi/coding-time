@@ -9,6 +9,70 @@
 正如列表可以用链表或数组实现一样，优先队列可以用堆或各种其他方法实现,例如无序数组。
 
 
+```js
+class PriorityQueue {
+  constructor() {
+    this.queue = [];
+  }
+
+  // 添加元素到优先队列中
+  enqueue(element, priority) {
+    const item = { element, priority };
+    let inserted = false;
+
+    for (let i = 0; i < this.queue.length; i++) {
+      if (item.priority < this.queue[i].priority) {
+        this.queue.splice(i, 0, item);
+        inserted = true;
+        break;
+      }
+    }
+
+    if (!inserted) {
+      this.queue.push(item);
+    }
+  }
+
+  // 从优先队列中移除并返回具有最高优先级的元素
+  dequeue() {
+    if (this.isEmpty()) {
+      return null;
+    }
+    return this.queue.shift().element;
+  }
+
+  // 返回具有最高优先级的元素，但不进行移除
+  front() {
+    if (this.isEmpty()) {
+      return null;
+    }
+    return this.queue[0].element;
+  }
+
+  // 检查优先队列是否为空
+  isEmpty() {
+    return this.queue.length === 0;
+  }
+
+  // 返回优先队列的大小
+  size() {
+    return this.queue.length;
+  }
+}
+```
+
+```js
+const priorityQueue = new PriorityQueue();
+priorityQueue.enqueue("apple", 2);
+priorityQueue.enqueue("banana", 3);
+priorityQueue.enqueue("orange", 1);
+
+console.log(priorityQueue.front()); // 输出: "orange"
+console.log(priorityQueue.dequeue()); // 输出: "orange"
+console.log(priorityQueue.size()); // 输出: 2
+console.log(priorityQueue.isEmpty()); // 输出: false
+```
+
 ## 参考
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Priority_queue)

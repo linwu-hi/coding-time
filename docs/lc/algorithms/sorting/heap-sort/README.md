@@ -1,18 +1,15 @@
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ba483469a87a4e2cb84cccd1d7fc2f25~tplv-k3u1fbpfcp-watermark.image)
-
-### 解题思路
+# 堆排序
 
 > 堆排序整个流程可以总结为：`上浮下沉`
 
 
-### 为什么解决本题需要用到堆？
+## 为什么解决本题需要用到堆？
 
 > 很多同学可能会想到这样一种解决，我把数组全部排序好，这样就可以拿到第k大的元素，这样是一种解法，但是我们是需要第K大的元素，`不一定要全部排序好再去拿，只针对部分元素进行排序`，这样的复杂度显然可以降低的
 
 也就是可以转化为：**使用堆排序来解决这个问题——建立一个大顶堆，做k−1 次删除操作后,堆顶元素就是我们要找的答案**`（堆排序过程中，不全部下沉，下沉`nums.length-k+1`,然后堆顶可以拿到我们top k答案了）` 
 
 
-# 堆排序
 
 ## 基本介绍
 
@@ -20,9 +17,9 @@
 
 > 注意因为完全二叉树的性质，可以用数组表示对应的树结构（所以，堆排序过程中，你是看不到树这数据结构的，用数组进行映射了），这叫`顺序存储`
 
-### 顺序存储二叉树
+## 顺序存储二叉树
 
-#### 特点
+### 特点
 
 - 第 n 个元素的 左子节点 为 **2*n+1**
 - 第 n 个元素的 右子节点 为 **2*n+2**
@@ -41,20 +38,19 @@
 
 ### 大顶堆举例
 
-
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4b81d24eaf4a4cf2a8d4ad38834d83b7~tplv-k3u1fbpfcp-zoom-1.image)
+![image.png](./images/2.png)
 
 
 对堆中的节点按层进行编号，映射到数组中如下图
 
-
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/21b443dac94b4d3ea67bfb2340c25a92~tplv-k3u1fbpfcp-zoom-1.image)
+![image.png](./images/3.png)
 
 大顶堆特点：`arr[i] >= arr[2*i+1] && arr[i] >= arr[2*i+2]`，i 对应第几个节点，i 从 0 开始编号
 
 ### 小顶堆举例
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3f0add9d436a4f0087273bf339987426~tplv-k3u1fbpfcp-zoom-1.image)
+![image.png](./images/4.png)
+
 
 
 小顶堆特点：`arr[i] <= arr[2*i+1] && arr[i] <= arr[2*i+2]`，i 对应第几个节点，i 从 0 开始
@@ -84,8 +80,7 @@
 
 1. 给定无序序列结构 如下：注意这里的操作用数组，树结构只是参考理解
 
-
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/636630cc07e74ff59367e039b6c6bbdd~tplv-k3u1fbpfcp-zoom-1.image)
+![image.png](./images/5.png)
 
   将给定无序序列构造成一个大顶堆。 
 
@@ -95,17 +90,14 @@
 
 	比较时：先让 5 与 9 比较，得到最大的那个，再和 6 比较，发现 9 大于 6，则调整他们的位置。
   
-
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/84812408715e4bd286339c58dfd0c9f8~tplv-k3u1fbpfcp-zoom-1.image)
-
+![image.png](./images/6.png)
 3. 找到第二个非叶子节点 4，由于 `[4,9,8]` 中，9 元素最大，则 4 和 9 进行交换
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b80c6548bcb444a998b8d0203f452d6d~tplv-k3u1fbpfcp-zoom-1.image)
+![image.png](./images/7.png)
 
 4. 此时，交换导致了子根 `[4,5,6]` 结构混乱，将其继续调整。`[4,5,6]` 中 6 最大，将 4 与 6 进行调整。
 
-
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9066ed703494465eb7018bc52cfccc56~tplv-k3u1fbpfcp-zoom-1.image)
+![image.png](./images/8.png)
 
 此时，就将一个无序序列构造成了一个大顶堆。
 
@@ -115,23 +107,19 @@
 
 1. 将堆顶元素 9 和末尾元素 4 进行交换
 
-
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/41cb7018fe664bd8b16c6d51d3d9a75b~tplv-k3u1fbpfcp-zoom-1.image)
+![image.png](./images/9.png)
 
 2. 重新调整结构，使其继续满足堆定义
 
-
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f01d2d9d32e84a8d9da232b215d1d8ae~tplv-k3u1fbpfcp-zoom-1.image)
+![image.png](./images/10.png)
 
 3. 再将堆顶元素 8 与末尾元素 5 进行交换，得到第二大元素 8
 
-
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7984a27d73df4a72a4b45018d6dc6f0d~tplv-k3u1fbpfcp-zoom-1.image)
+![image.png](./images/11.png)
 
 4. 后续过程，继续进行调整、交换，如此反复进行，最终使得整个序列有序
 
-
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a85866f5ea13489ba9a4aad9ae60d497~tplv-k3u1fbpfcp-zoom-1.image)
+![image.png](./images/12.png)
 
 ### 总结思路
 
@@ -214,6 +202,7 @@ var findKthLargest = function(nums, k) {
 findKthLargest(nums,nums.length)
 // 或者调整一下 let i=nums.length-1;i>=nums.length-k+1;的条件就行
 ```
+
 
 ## 复杂度
 

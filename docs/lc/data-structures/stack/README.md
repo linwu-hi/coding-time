@@ -18,74 +18,63 @@
 ## 实现栈
 
 ```js
-import LinkedList from '../linked-list/LinkedList';
-
-export default class Stack {
+class Stack {
   constructor() {
-    // We're going to implement Stack based on LinkedList since these
-    // structures are quite similar. Compare push/pop operations of the Stack
-    // with prepend/deleteHead operations of LinkedList.
-    // 用数组代替链表也行
-    this.linkedList = new LinkedList();
+    this.items = [];
   }
 
-  /**
-   * @return {boolean}
-   */
-  isEmpty() {
-    // The stack is empty if its linked list doesn't have a head.
-    return !this.linkedList.head;
+  // 入栈操作
+  push(element) {
+    this.items.push(element);
   }
 
-  /**
-   * @return {*}
-   */
+  // 出栈操作
+  pop() {
+    if (this.isEmpty()) {
+      throw new Error("Stack is empty");
+    }
+    return this.items.pop();
+  }
+
+  // 返回栈顶元素
   peek() {
     if (this.isEmpty()) {
-      // If the linked list is empty then there is nothing to peek from.
-      return null;
+      throw new Error("Stack is empty");
     }
-
-    // Just read the value from the start of linked list without deleting it.
-    return this.linkedList.head.value;
+    return this.items[this.items.length - 1];
   }
 
-  /**
-   * @param {*} value
-   */
-  push(value) {
-    // Pushing means to lay the value on top of the stack. Therefore let's just add
-    // the new value at the start of the linked list.
-    this.linkedList.prepend(value);
+  // 判断栈是否为空
+  isEmpty() {
+    return this.items.length === 0;
   }
 
-  /**
-   * @return {*}
-   */
-  pop() {
-    // Let's try to delete the first node (the head) from the linked list.
-    // If there is no head (the linked list is empty) just return null.
-    const removedHead = this.linkedList.deleteHead();
-    return removedHead ? removedHead.value : null;
+  // 返回栈的大小
+  size() {
+    return this.items.length;
   }
 
-  /**
-   * @return {*[]}
-   */
-  toArray() {
-    return this.linkedList
-      .toArray()
-      .map((linkedListNode) => linkedListNode.value);
-  }
-
-  /**
-   * @param {function} [callback]
-   * @return {string}
-   */
-  toString(callback) {
-    return this.linkedList.toString(callback);
+  // 清空栈
+  clear() {
+    this.items = [];
   }
 }
+
+```
+
+```js
+const stack = new Stack();
+stack.push(10);
+stack.push(20);
+stack.push(30);
+console.log(stack.peek()); // 输出: 30
+console.log(stack.size()); // 输出: 3
+console.log(stack.isEmpty()); // 输出: false
+stack.pop();
+console.log(stack.size()); // 输出: 2
+stack.clear();
+console.log(stack.isEmpty()); // 输出: true
+
 ```
 
 ## 参考

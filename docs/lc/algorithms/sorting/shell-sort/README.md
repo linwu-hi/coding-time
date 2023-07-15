@@ -18,6 +18,32 @@
 
 最后，我们使用间隔值为1对数组的剩余部分进行排序。希尔排序使用插入排序来对数组进行排序。
 
+```js
+function shellSort(arr) {
+  const len = arr.length;
+  let gap = Math.floor(len / 2);
+
+  while (gap > 0) {
+    for (let i = gap; i < len; i++) {
+      const current = arr[i];
+      let j = i;
+
+      while (j >= gap && arr[j - gap] > current) {
+        arr[j] = arr[j - gap];
+        j -= gap;
+      }
+
+      arr[j] = current;
+    }
+
+    gap = Math.floor(gap / 2);
+  }
+
+  return arr;
+}
+
+```
+
 ## 复杂度
 
 | 名称                  | 最佳情况          | 平均情况             | 最坏情况               | 内存      | 稳定性    | 备注      |

@@ -13,7 +13,6 @@
 
 ![Graph](./images/graph.jpeg)
 
-*Made with [okso.app](https://okso.app)*
 
 ## 完整代码
 

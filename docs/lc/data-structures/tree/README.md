@@ -18,7 +18,6 @@
 
 ![Tree](./images/tree.jpeg)
 
-*Made with [okso.app](https://okso.app)*
 
 ## 参考
 

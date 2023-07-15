@@ -1,4 +1,4 @@
-# 插入排序（Insertion Sort）
+# 插入排序
 
 插入排序（Insertion Sort）是一种简单直观的排序算法。它的工作原理是通过构建有序序列，在未排序的部分中从后向前逐步扫描，找到合适位置并插入元素。插入排序通常采用原地排序（只使用O(1)的额外空间），因此在扫描过程中需要反复将已排序元素向后移动，为新元素提供插入空间。
 
@@ -46,7 +46,7 @@ function insertionSort(arr) {
 ```
 
 
-![v2-91b76e8e4dab9b0cad9a017d7dd431e2_b.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9b2c7d3696404b9fa588e0b72b2962a0~tplv-k3u1fbpfcp-watermark.image?)
+![insertion_sort](./images/insertion_sort.webp)
 
 [来源](https://visualgo.net/zh)
 

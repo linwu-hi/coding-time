@@ -13,63 +13,62 @@
 ## 实现队列
 
 ```js
-import LinkedList from '../linked-list/LinkedList';
-export default class Queue {
+class Queue {
   constructor() {
-    // We're going to implement Queue based on LinkedList since the two
-    // structures are quite similar. Namely, they both operate mostly on
-    // the elements at the beginning and the end. Compare enqueue/dequeue
-    // operations of Queue with append/deleteHead operations of LinkedList.
-    this.linkedList = new LinkedList();
+    this.items = [];
   }
 
-  /**
-   * @return {boolean}
-   */
-  isEmpty() {
-    return !this.linkedList.head;
+  // 入队操作
+  enqueue(element) {
+    this.items.push(element);
   }
 
-  /**
-   * Read the element at the front of the queue without removing it.
-   * @return {*}
-   */
-  peek() {
-    if (this.isEmpty()) {
-      return null;
-    }
-
-    return this.linkedList.head.value;
-  }
-
-  /**
-   * Add a new element to the end of the queue (the tail of the linked list).
-   * This element will be processed after all elements ahead of it.
-   * @param {*} value
-   */
-  enqueue(value) {
-    this.linkedList.append(value);
-  }
-
-  /**
-   * Remove the element at the front of the queue (the head of the linked list).
-   * If the queue is empty, return null.
-   * @return {*}
-   */
+  // 出队操作
   dequeue() {
-    const removedHead = this.linkedList.deleteHead();
-    return removedHead ? removedHead.value : null;
+    if (this.isEmpty()) {
+      throw new Error("Queue is empty");
+    }
+    return this.items.shift();
   }
 
-  /**
-   * @param [callback]
-   * @return {string}
-   */
-  toString(callback) {
-    // Return string representation of the queue's linked list.
-    return this.linkedList.toString(callback);
+  // 返回队头元素
+  front() {
+    if (this.isEmpty()) {
+      throw new Error("Queue is empty");
+    }
+    return this.items[0];
+  }
+
+  // 判断队列是否为空
+  isEmpty() {
+    return this.items.length === 0;
+  }
+
+  // 返回队列的大小
+  size() {
+    return this.items.length;
+  }
+
+  // 清空队列
+  clear() {
+    this.items = [];
   }
 }
+
+```
+
+```js
+const queue = new Queue();
+queue.enqueue(10);
+queue.enqueue(20);
+queue.enqueue(30);
+console.log(queue.front()); // 输出: 10
+console.log(queue.size()); // 输出: 3
+console.log(queue.isEmpty()); // 输出: false
+queue.dequeue();
+console.log(queue.size()); // 输出: 2
+queue.clear();
+console.log(queue.isEmpty()); // 输出: true
 ```
 
 ## 参考

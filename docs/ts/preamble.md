@@ -1,6 +1,11 @@
 # 序言
 
+![现代TypeScript高级教程](/ts.jpg)
+
+
 > 可能是市面上比较好的Typescript高级教程，适合有一定Typescipt基础的同学学习
+
+
 
 
 随着TypeScript的日益普及，它已经成为现代Web开发的重要工具。然而，尽管TypeScript初学者可以轻松上手并开始编写代码，但深入理解TypeScript的强大功能和高级特性却是一项更具挑战性的任务。"现代TypeScript高级教程"就是为了帮助您解开TypeScript的高级秘密而编写的。

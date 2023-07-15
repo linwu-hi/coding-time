@@ -11,13 +11,99 @@
 
 ![Hash Table](./images/hash-table.jpeg)
 
-*Made with [okso.app](https://okso.app)*
 
 通过单独的链接解决哈希冲突
 
 ![Hash Collision](./images/collision-resolution.jpeg)
 
-*Made with [okso.app](https://okso.app)*
+```js
+class HashTable {
+  constructor() {
+    this.table = {};
+  }
+
+  // 哈希函数
+  hash(key) {
+    let hash = 0;
+    for (let i = 0; i < key.length; i++) {
+      hash += key.charCodeAt(i);
+    }
+    return hash % 37; // 选择一个适当的哈希表大小，如质数
+  }
+
+  // 向哈希表中插入键值对
+  put(key, value) {
+    const index = this.hash(key);
+    if (!this.table[index]) {
+      this.table[index] = {};
+    }
+    this.table[index][key] = value;
+  }
+
+  // 从哈希表中获取指定键的值
+  get(key) {
+    const index = this.hash(key);
+    if (this.table[index] && this.table[index][key]) {
+      return this.table[index][key];
+    }
+    return undefined;
+  }
+
+  // 从哈希表中移除指定键值对
+  remove(key) {
+    const index = this.hash(key);
+    if (this.table[index] && this.table[index][key]) {
+      delete this.table[index][key];
+      if (Object.keys(this.table[index]).length === 0) {
+        delete this.table[index];
+      }
+      return true;
+    }
+    return false;
+  }
+
+  // 检查哈希表中是否存在指定键
+  contains(key) {
+    const index = this.hash(key);
+    return !!(this.table[index] && this.table[index][key]);
+  }
+
+  // 返回哈希表中的所有键
+  keys() {
+    const keys = [];
+    for (const index in this.table) {
+      for (const key in this.table[index]) {
+        keys.push(key);
+      }
+    }
+    return keys;
+  }
+
+  // 返回哈希表中的所有值
+  values() {
+    const values = [];
+    for (const index in this.table) {
+      for (const key in this.table[index]) {
+        values.push(this.table[index][key]);
+      }
+    }
+    return values;
+  }
+}
+```
+
+
+```js
+const hashTable = new HashTable();
+hashTable.put("apple", 10);
+hashTable.put("banana", 20);
+console.log(hashTable.get("apple")); // 输出: 10
+console.log(hashTable.contains("banana")); // 输出: true
+console.log(hashTable.remove("banana")); // 输出: true
+console.log(hashTable.contains("banana")); // 输出: false
+console.log(hashTable.keys()); // 输出: ["apple"]
+console.log(hashTable.values()); // 输出: [10]
+```
 
 ## 参考
 

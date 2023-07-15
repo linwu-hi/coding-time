@@ -28,6 +28,41 @@
 
 ![计数排序](https://1.bp.blogspot.com/-xPqylngqASY/WLGq3p9n9vI/AAAAAAAAAHM/JHdtXAkJY8wYzDMBXxqarjmhpPhM0u8MACLcB/s1600/ResultArrayCS.gif)
 
+
+```js
+function countingSort(arr) {
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  // 确定数组的范围
+  const max = Math.max(...arr);
+  const min = Math.min(...arr);
+  const range = max - min + 1;
+
+  // 创建计数数组，并初始化为0
+  const countArray = new Array(range).fill(0);
+
+  // 统计每个元素出现的次数
+  for (let i = 0; i < arr.length; i++) {
+    const countIndex = arr[i] - min;
+    countArray[countIndex]++;
+  }
+
+  // 根据计数数组重新排序原数组
+  let sortedIndex = 0;
+  for (let i = 0; i < countArray.length; i++) {
+    while (countArray[i] > 0) {
+      arr[sortedIndex] = i + min;
+      sortedIndex++;
+      countArray[i]--;
+    }
+  }
+
+  return arr;
+}
+````
+
 ## 复杂度
 
 | 名称                  | 最佳情况          | 平均情况             | 最坏情况               | 内存    | 稳定性    | 备注      |
