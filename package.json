@@ -17,6 +17,7 @@
     "dirname": "npx ts-node ./generateMarkdownToc.ts"
   },
   "devDependencies": {
+    "@octokit/rest": "^20.0.1",
     "@vuepress/client": "2.0.0-beta.62",
     "@vuepress/utils": "2.0.0-alpha.1",
     "vue": "^3.3.4",
