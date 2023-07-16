@@ -41,11 +41,33 @@ const octokit = new Octokit({ auth: token });
 const recordFilePath = './uploaded_files.txt';
 
 
+const fs = require('fs');
+const path = require('path');
+const { Octokit } = require('@octokit/rest');
 
-// Directories to be excluded
-const excludedDirectories = ['.vuepress', 'node_modules'];
+// GitHub personal access token
+const token = 'YOUR_PERSONAL_ACCESS_TOKEN';
+
+// GitHub repository information
+const owner = 'OWNER_USERNAME';
+const repo = 'REPOSITORY_NAME';
+
+// Directory path of the docs folder
+const docsDirectory = './docs';
+
+// Labels to be added to each issue
+const labelColors = {
+  javascript: 'red',
+  typescript: 'lightblue',
+  dart: '#0000FF',
+  leetcode: '#FFFF00',
+  '数据结构和算法': '#FF00FF',
+  'data-structures': '#00FFFF',
+  algorithms: '#000000'
+};
+
+
 // Function to read all Markdown files in the given directory
-
 async function readMarkdownFiles(directory) {
   const files = fs.readdirSync(directory);
 
@@ -57,9 +79,9 @@ async function readMarkdownFiles(directory) {
       await readMarkdownFiles(filePath); // Recursively read files in non-excluded subdirectories
     } else if (stat.isFile() && path.extname(file) === '.md') {
       const content = fs.readFileSync(filePath, 'utf8');
-      const title = path.basename(file, '.md');
+      const title = extractTitleFromContent(content);
       if (!isFileUploaded(title)) {
-        await createIssue(title, content, issueLabels);
+        await createIssue(title, content, labelColors);
         addUploadedFile(title);
       }
     }
@@ -84,6 +106,15 @@ async function createIssue(title, body, labels) {
   }
 }
 
+// Function to extract title from the content (first heading)
+function extractTitleFromContent(content) {
+  const match = content.match(/^#\s*(.+)/);
+  if (match) {
+    return match[1];
+  }
+  return '';
+}
+
 // Function to check if a file has been uploaded
 function isFileUploaded(filename) {
   if (fs.existsSync(recordFilePath)) {
@@ -106,3 +137,4 @@ readMarkdownFiles(docsDirectory)
   .catch((error) => {
     console.log('Error:', error);
   });
+
