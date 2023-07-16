@@ -108,6 +108,7 @@ export const dirName = {
         link:'practice/fetch',
         children:[
           'fetch',
+          'poker'
         ]
       }
     ]
