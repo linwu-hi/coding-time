@@ -399,7 +399,7 @@ promisesAplusTests(MyPromise, function (err) {
 
 ## Promise其它API
 
-要实现`Promise.all`和`Promise.race`等其他API，可以根据Promise的规范和功能需求来编写相应的代码。以下是对这两个API的实现进行展开讲解的代码示例：
+要实现`Promise.all`和`Promise.race`等其他API，可以根据Promise的规范和功能需求来编写相应的代码。
 
 1. 实现`Promise.all`：
    `Promise.all`方法接收一个可迭代对象（如数组或类数组对象），并返回一个新的Promise，该Promise在所有输入的Promise都成功完成时才会成功，否则将会失败。返回的Promise的解决值是一个由所有输入Promise解决值组成的数组。

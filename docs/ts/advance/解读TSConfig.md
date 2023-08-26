@@ -38,7 +38,7 @@ TypeScript 配置文件（tsconfig.json）是用于配置 TypeScript 项目的�
 
 ## compilerOptions
 
-`compilerOptions` 是 tsconfig.json 中最重要的配置选项之一，它允许我们指定 TypeScript 编译器的各种行为和设置。以下是一些常用的 compilerOptions 配置选项：
+`compilerOptions` 是 tsconfig.json 中最重要的配置选项之一，它允许我们指定 TypeScript 编译器的各种行为和设置。
 
 ### target
 

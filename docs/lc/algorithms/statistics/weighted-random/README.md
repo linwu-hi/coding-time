@@ -81,7 +81,6 @@ const pseudoCumulativeWeights = [
 ];
 ```
 
-以下是`weightedRandom`函数的实现示
 
 例：
 

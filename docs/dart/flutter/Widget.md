@@ -55,8 +55,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
 ## 布局组件：构建灵活的用户界面
 
-在Flutter中，有多种布局组件可供选择，用于在屏幕上排列和定位Widget。以下是几个常用的布局组件：
-
+在Flutter中，有多种布局组件可供选择，用于在屏幕上排列和定位Widget。
 ###  **Container**
 
 Container是一个多功能的容器，可以用于装饰、定位和约束其子Widget。你可以设置它的大小、颜色、边距等。
