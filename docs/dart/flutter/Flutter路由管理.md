@@ -7,7 +7,6 @@
 
 `Navigator`是Flutter中用于管理路由的核心组件。它允许我们在应用程序中执行页面的推入（push）和弹出（pop）操作。通过`Navigator`，我们可以将页面推入到导航堆栈中，使其成为当前活动页面，也可以从导航堆栈中弹出页面。
 
-以下是使用`Navigator`进行页面推入和弹出的示例代码：
 
 ```dart
 // 推入新页面
@@ -26,7 +25,6 @@ Navigator.pop(context);
 
 命名路由是一种更高级的路由管理方式，它通过给每个页面指定唯一的名称来进行导航。通过使用命名路由，我们可以在应用程序中定义和管理所有的路由映射，使导航更加清晰和可维护。
 
-以下是在应用程序中定义和使用命名路由的示例代码：
 
 ```dart
 // 在应用程序中定义命名路由
@@ -45,7 +43,6 @@ Navigator.pushNamed(context, '/details');
 
 `PageRouteBuilder`是一个灵活的路由构建器，它允许我们自定义页面的过渡动画和路由效果。通过使用`PageRouteBuilder`，我们可以实现淡入淡出、滑动和缩放等各种过渡效果，为应用程序增加动态和流畅的用户体验。
 
-以下是使用`PageRouteBuilder`创建自定义过渡动画的示例代码：
 
 ```dart
 Navigator.push(
@@ -70,7 +67,6 @@ Navigator.push(
 
 使用`CupertinoPageRoute`和`MaterialPageRoute`可以确保应用程序在不同平台上具有一致的外观和体验。
 
-以下是使用`CupertinoPageRoute`和`MaterialPageRoute`的示例代码：
 
 ```dart
 // 在Cupertino中进行页面导航

@@ -6,7 +6,6 @@
 
 红黑树的平衡并不完美，但足以保证在`O(log n)`的时间内进行搜索，其中`n`是树中的元素总数。插入、删除操作以及树的重新排列和染色也可以在`O(log n)`的时间内完成。
 
-以下是红黑树的示例：
 
 ![红黑树](https://upload.wikimedia.org/wikipedia/commons/6/66/Red-black_tree_example.svg)
 

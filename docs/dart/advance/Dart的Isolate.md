@@ -1,6 +1,6 @@
 # Dart的Isolate
 
-Isolate 是 Dart 中进行并发编程的一种方式。由于 Dart 是单线程模型，因此在需要处理 CPU 密集型任务或需要执行长时间运行的操作时，可以使用 Isolate。以下列出了一些常见的 Isolate 应用场景：
+Isolate 是 Dart 中进行并发编程的一种方式。由于 Dart 是单线程模型，因此在需要处理 CPU 密集型任务或需要执行长时间运行的操作时，可以使用 Isolate。
 
 
 ## 创建 Isolate
@@ -86,7 +86,7 @@ void main() async {
 
 ## 应用场景
 
-Isolate 是 Dart 中进行并发编程的一种方式。由于 Dart 是单线程模型，因此在需要处理 CPU 密集型任务或需要执行长时间运行的操作时，可以使用 Isolate。以下列出了一些常见的 Isolate 应用场景：
+Isolate 是 Dart 中进行并发编程的一种方式。由于 Dart 是单线程模型，因此在需要处理 CPU 密集型任务或需要执行长时间运行的操作时，可以使用 Isolate。
 
 ### 数据处理
 

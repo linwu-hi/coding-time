@@ -9,13 +9,11 @@
 
 Material Design是一种现代化、美观的设计风格，由Google提出，用于创建一致的用户界面。Flutter提供了许多Material Design风格的组件，用于构建漂亮、具有响应性的应用程序。
 
-以下是一些常用的Flutter Material Design组件：
 
 ### 1. AppBar组件
 
 `AppBar`是Material Design风格的应用栏，通常位于页面的顶部，用于显示标题、操作按钮等。
 
-以下是一个简单的AppBar示例：
 
 ```dart
 AppBar(
@@ -37,7 +35,6 @@ AppBar(
 
 `FloatingActionButton`是一个浮动的圆形按钮，常用于触发应用程序中的主要操作。
 
-以下是一个简单的FloatingActionButton示例：
 
 ```dart
 FloatingActionButton(
@@ -54,7 +51,6 @@ FloatingActionButton(
 
 `Card`是一种具有阴影效果的卡片式容器，常用于显示相关的内容，如图片、标题和描述。
 
-以下是一个简单的Card示例：
 
 ```dart
 Card(
@@ -78,13 +74,11 @@ Card(
 
 Cupertino是iOS风格的设计语言，Flutter提供了一系列的Cupertino风格组件，使得应用程序可以在iOS设备上具有原生的外观和行为。
 
-以下是一些常用的Flutter Cupertino风格组件：
 
 ### 1. CupertinoNavigationBar组件
 
 `CupertinoNavigationBar`是Cupertino风格的导航栏，通常位于页面的顶部，用于显示标题、操作按钮等。
 
-以下是一个简单的CupertinoNavigationBar示例：
 
 ```dart
 CupertinoNavigationBar(
@@ -104,7 +98,6 @@ CupertinoNavigationBar(
 
 `CupertinoButton`是Cupertino风格的按钮，具有iOS风格的外观和触摸反馈。
 
-以下是一个简单的CupertinoButton示例：
 
 ```dart
 CupertinoButton(
@@ -121,7 +114,6 @@ CupertinoButton(
 
 `CupertinoAlertDialog`是Cupertino风格的对话框，用于显示警告、确认或其他相关信息。
 
-以下是一个简单的CupertinoAlertDialog示例：
 
 ```dart
 showDialog(

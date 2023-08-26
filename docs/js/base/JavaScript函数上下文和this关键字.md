@@ -4,7 +4,6 @@
 
 ## 1. 函数作为独立函数调用
 
-考虑以下脚本：
 
 ```javascript
 function printThis() {
@@ -23,7 +22,6 @@ console.log(printThis() === window);
 
 ## 2. 函数作为对象方法调用
 
-考虑以下脚本：
 
 ```javascript
 function printThis() {
@@ -41,7 +39,6 @@ console.log(obj.printThis() === obj);
 
 ## 3. 构造函数调用
 
-考虑以下脚本：
 
 ```javascript
 function Dog() {
@@ -59,7 +56,6 @@ console.log(dog.name);
 
 ## 4. 构造函数返回对象
 
-考虑以下脚本：
 
 ```javascript
 const puppet = {
@@ -82,7 +78,6 @@ console.log(emperor.rules);
 
 ## 5. 函数调用时使用 `call` 或 `apply`
 
-考虑以下脚本：
 
 ```javascript
 function greet() {
@@ -106,8 +101,7 @@ console.log(greet.apply(person)); // 使用apply
 
 ## 6. 箭头函数的上下文
 
-箭头函数的 `this` 绑定与常规函数不同，箭头函数没有自己的 `this` 值，而是捕获了封闭上下文的 `this` 值。考虑以下脚本：
-
+箭头函数的 `this` 绑定与常规函数不同，箭头函数没有自己的 `this` 值，而是捕获了封闭上下文的 `this` 值。
 ```javascript
 const obj = {
   name: 'Bob',

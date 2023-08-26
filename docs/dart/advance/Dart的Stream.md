@@ -217,7 +217,7 @@ void main() {
 
 ## 5. 数据流处理
 
-在处理大量数据流时，你可以使用 Stream 创建一个数据管道，并利用其提供的 `map`、`filter`、`reduce` 等操作进行数据处理。以下示例将 Stream 中的数字逐个乘以 2：
+在处理大量数据流时，你可以使用 Stream 创建一个数据管道，并利用其提供的 `map`、`filter`、`reduce` 等操作进行数据处理。
 
 ```dart
 void main() {

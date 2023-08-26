@@ -3,69 +3,26 @@ const path = require('path');
 const { Octokit } = require('@octokit/rest');
 
 // GitHub personal access token
-const token = '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';
+const token = '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';
 
 // GitHub repository information
 const owner = 'linwu-hi';
-const repo = 'coding-time';
+const repo = 'code-interview';
 
 // Directory path of the docs folder
-const docsDirectory = './docs';
+const docsDirectory = './docs/lc';
 
 // Labels to be added to each issue
-const labelColors = {
-  javascript: 'red',
-  typescript: 'lightblue',
-  dart: '#0000FF',
-  leetcode: '#FFFF00',
-  '数据结构和算法': '#FF00FF',
-  'data-structures': '#00FFFF',
-  algorithms: '#000000'
-};
-
-// Labels to be added to each issue
-const issueLabels = [
-  'javascript',
-  'typescript',
-  'dart',
-  'leetcode',
-  '数据结构和算法',
-  'data-structures',
-  'algorithms'
-].map(label => ({ name: label, color: labelColors[label] }));
-
-// Initialize Octokit
-const octokit = new Octokit({ auth: token });
+const labelColors = [
+  { name: 'leetcode', color: '#FBCA04' }
+];
+const excludedDirectories = ['.vuepress', '.git', 'node_modules'];
 
 // File path to store the uploaded files record
 const recordFilePath = './uploaded_files.txt';
 
-
-const fs = require('fs');
-const path = require('path');
-const { Octokit } = require('@octokit/rest');
-
-// GitHub personal access token
-const token = 'YOUR_PERSONAL_ACCESS_TOKEN';
-
-// GitHub repository information
-const owner = 'OWNER_USERNAME';
-const repo = 'REPOSITORY_NAME';
-
-// Directory path of the docs folder
-const docsDirectory = './docs';
-
-// Labels to be added to each issue
-const labelColors = {
-  javascript: 'red',
-  typescript: 'lightblue',
-  dart: '#0000FF',
-  leetcode: '#FFFF00',
-  '数据结构和算法': '#FF00FF',
-  'data-structures': '#00FFFF',
-  algorithms: '#000000'
-};
-
+// Initialize Octokit
+const octokit = new Octokit({ auth: token });
 
 // Function to read all Markdown files in the given directory
 async function readMarkdownFiles(directory) {
@@ -94,14 +51,14 @@ async function createIssue(title, body, labels) {
     const response = await octokit.issues.create({
       owner: owner,
       repo: repo,
-      title: title,
+      title: `面试官：${title}`,
       body: body,
       labels: labels
     });
 
     console.log(`Successfully created issue: ${title}`);
   } catch (error) {
-    console.log(`Failed to create issue: ${title}`);
+    console.log(`Failed to create issue: 面试官：${title}`);
     console.log(`Error: ${error.message}`);
   }
 }
@@ -137,4 +94,3 @@ readMarkdownFiles(docsDirectory)
   .catch((error) => {
     console.log('Error:', error);
   });
-

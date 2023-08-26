@@ -1,7 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const prependText = `|  [点击在线阅读，体验更好](https://www.coding-time.cn)                                 |  [链接](https://www.coding-time.cn)                                     
+const prependText = `
+  ## 大厂学习资料
+
+|  [点击在线阅读，体验更好](https://www.coding-time.cn)                                 |  [链接](https://www.coding-time.cn)                                     
 | --------------------------------------- | -------------------------------------------- |
 | **[现代JavaScript高级小册](https://www.coding-time.cn)**                      | [链接](https://www.coding-time.cn)           |
 | **[深入浅出Dart](https://www.coding-time.cn)**                                | [链接](https://www.coding-time.cn)         |
@@ -38,6 +41,6 @@ function writeToMarkdownFiles(directory, content) {
 }
 
 // 示例用法：
-const directoryPath = '/Users/vnues/coding-time'; // 替换为实际的目录路径
+const directoryPath = '/Users/vnues/coding-time/docs/lc'; // 替换为实际的目录路径
 
 writeToMarkdownFiles(directoryPath, prependText);

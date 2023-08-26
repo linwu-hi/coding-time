@@ -355,7 +355,6 @@ npx jest --inspect
 
 使用Promise/A+测试套件是确保Promise实现符合规范的重要步骤。Promise/A+测试套件是一组针对Promise实现的测试用例，可用于验证Promise是否符合Promise/A+规范的要求。
 
-以下是使用Promise/A+测试套件的步骤：
 
 1. 下载Promise/A+测试套件：
    首先，从Promise/A+官方的GitHub仓库（https://github.com/promises-aplus/promises-tests）下载Promise/A+测试套件的代码。将其保存到项目的测试目录中。
