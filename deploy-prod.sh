@@ -5,7 +5,7 @@ set -e
 
 git pull origin main
 
-npm run docs:build
+# npm run docs:build
 
 
 # 打包docker镜像之前把之前的先删除了 - 这里不用版本号管理了
