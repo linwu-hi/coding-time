@@ -25,4 +25,8 @@ export const zhNavbar = navbar([
     text: '谷歌插件小册',
     link: 'https://gitee.com/linwu-hi/coding-time-chrome',
   },
+  {
+    text: 'Markdown编辑器',
+    link: '/md',
+  },
 ]);
