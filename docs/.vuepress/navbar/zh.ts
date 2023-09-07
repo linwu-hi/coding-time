@@ -27,6 +27,6 @@ export const zhNavbar = navbar([
   },
   {
     text: 'Markdown编辑器',
-    link: 'https://www.coding-time.cn/md',
+    link: 'https://linwu-hi.gitee.io/md',
   },
 ]);

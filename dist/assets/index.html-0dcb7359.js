@@ -1,0 +1,20 @@
+import{_ as s,r as e,o as t,c as i,a as n,b as c,e as l,d as p}from"./app-2d6feb9f.js";const o={},r=p(`<h1 id="链表遍历" tabindex="-1"><a class="header-anchor" href="#链表遍历" aria-hidden="true">#</a> 链表遍历</h1><p>我们的任务是顺序遍历给定的链表</p><p>比如下面的链表</p><figure><img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg" alt="Singly linked list" tabindex="0" loading="lazy"><figcaption>Singly linked list</figcaption></figure><p>遍历的顺序应该是</p><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>12 → 99 → 37
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>因为我们每个节点只访问一次，时间复杂度应该是<code>O(n)</code></p><h2 id="完整代码" tabindex="-1"><a class="header-anchor" href="#完整代码" aria-hidden="true">#</a> 完整代码</h2><div class="language-javascript line-numbers-mode" data-ext="js"><pre class="language-javascript"><code><span class="token doc-comment comment">/**
+ * Traversal callback function.
+ * <span class="token keyword">@callback</span> traversalCallback
+ * <span class="token keyword">@param</span> <span class="token class-name"><span class="token punctuation">{</span><span class="token operator">*</span><span class="token punctuation">}</span></span> <span class="token parameter">nodeValue</span>
+ */</span>
+
+<span class="token doc-comment comment">/**
+ * <span class="token keyword">@param</span> <span class="token class-name"><span class="token punctuation">{</span>LinkedList<span class="token punctuation">}</span></span> <span class="token parameter">linkedList</span>
+ * <span class="token keyword">@param</span> <span class="token class-name"><span class="token punctuation">{</span>traversalCallback<span class="token punctuation">}</span></span> <span class="token parameter">callback</span>
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">traversal</span><span class="token punctuation">(</span><span class="token parameter">linkedList<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> currentNode <span class="token operator">=</span> linkedList<span class="token punctuation">.</span>head<span class="token punctuation">;</span>
+
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>currentNode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span>currentNode<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    currentNode <span class="token operator">=</span> currentNode<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="参考" tabindex="-1"><a class="header-anchor" href="#参考" aria-hidden="true">#</a> 参考</h2>`,10),d={href:"https://zh.wikipedia.org/wiki/%E9%93%BE%E8%A1%A8",target:"_blank",rel:"noopener noreferrer"};function u(k,v){const a=e("ExternalLinkIcon");return t(),i("div",null,[r,n("ul",null,[n("li",null,[n("a",d,[c("Wikipedia"),l(a)])])])])}const b=s(o,[["render",u],["__file","index.html.vue"]]);export{b as default};

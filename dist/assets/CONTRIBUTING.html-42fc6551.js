@@ -1,1 +1,0 @@
-import{_ as t,o as a,c,a as e,b as o}from"./app-0301958d.js";const r={},s=e("h1",{id:"如何贡献",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#如何贡献","aria-hidden":"true"},"#"),o(" 如何贡献")],-1),n=[s];function _(d,i){return a(),c("div",null,n)}const l=t(r,[["render",_],["__file","CONTRIBUTING.html.vue"]]);export{l as default};
