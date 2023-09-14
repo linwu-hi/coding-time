@@ -92,7 +92,6 @@ console.log(obj.getSecret()); // 输出: 'my secret data'
 
 ## 3. WeakSet深入解析
 
-接下来，我们将更深入地探讨`WeakSet`的特性和用法。
 
 ### 3.1 WeakSet的创建和使用
 
